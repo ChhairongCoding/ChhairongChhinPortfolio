@@ -106,6 +106,7 @@ const Contact = forwardRef((props, ref) => {
                 <p>Phnom Penh, Cambodia</p>
               </div>
             </motion.div>
+
             <motion.img
               whileInView={{ y: ["0%", "10%", "0%"] }}
               transition={{

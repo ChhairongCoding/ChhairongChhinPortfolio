@@ -32,7 +32,7 @@ const Portfolio = forwardRef((props, ref) => {
   return (
     <section
       ref={ref}
-      className="w-full h-screen  flex items-center justify-center relative"
+      className="w-full h-screen flex items-center justify-center relative "
     >
       <div>
         <motion.img
@@ -58,14 +58,14 @@ const Portfolio = forwardRef((props, ref) => {
               repeatType: "loop",
             },
           }}
-          className="w-1/3 absolute top-6 right-0 z-10 h-60 object-cover"
+          className="w-1/4 absolute top-2 right-0 z-10 h-60 object-cover"
           src={UFO}
           alt="Flying UFO"
         />
       </div>
 
-      <div className="row w-11/12 m-auto relative">
-        <div className="col text-center pb-20 text-4xl font-sans font-bold text-white">
+      <div className="row w-11/12 m-auto relative ">
+        <div className="col text-center pb-16 text-4xl font-sans font-bold text-white">
           <motion.h1
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -81,7 +81,7 @@ const Portfolio = forwardRef((props, ref) => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.9, duration: 2, type: "spring" }}
-            className="contain flex gap-8 h-auto"
+            className="contain flex gap-8 h-auto "
           >
             {data.map((d, index) => (
               <CardPortfolio {...d} key={index} />

@@ -1,6 +1,11 @@
 import React, { forwardRef } from "react";
 import { delay, motion } from "framer-motion";
 import Hero from "../assets/Images/section-about.png";
+import js from "../assets/Images/logo/js.png";
+import express from "../assets/Images/logo/express.png";
+import node from "../assets/Images/logo/node.png";
+import reactjs from "../assets/Images/logo/react.png";
+import tailwindcss from "../assets/Images/logo/Tailwind_CSS.png";
 
 const lange = [
   { name: "HTML & CSS", level: 90 },
@@ -63,16 +68,17 @@ const About = forwardRef((props, ref) => (
             viewport={{ once: true, amount: 0.5 }}
             className="absolute  bg-gradient-to-tr from-blue-600  to-transparent to-90% w-[100%] h-[90%] -left-[80px] shadow-2xl rounded-xl"
           ></motion.div>
-
-          <motion.img
-            variants={bounceInVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            className="w-[80%] relative drop-shadow-2xl z-30 "
-            src={Hero}
-            alt=""
-          />
+          <div className="relative  ">
+            <motion.img
+              variants={bounceInVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              className="w-[80%] relative drop-shadow-2xl z-30 "
+              src={Hero}
+              alt=""
+            />
+          </div>
         </div>
       </div>
       <div className="col w-1/2 h-full pt-20 pb-10 text-4xl font-sans  text-white flex flex-col justify-between">
@@ -110,19 +116,20 @@ const About = forwardRef((props, ref) => (
             viewport={{ once: true }}
             className="py-6"
           >
-            <h1 className="text-4xl font-bold">What Level am I!</h1>
+            <h1 className="text-4xl font-bold ">What Level am I!</h1>
           </motion.div>
-          <div className="contain text-2xl">
+          <div className="contain text-2xl ">
             {lange.map((l, index) => (
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 2, delay: 2.4, ease: "linear" }}
-                className="mt-2 w-full"
+                className="mt-2 w-full "
                 key={index}
               >
                 <h1 className="mb-2">{l.name}</h1>
+                <div className="w-[45%] border border-white absolute h-6 rounded-3xl  "></div>
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${l.level}%` }}
